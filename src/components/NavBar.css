@@ -1,0 +1,53 @@
+/*****Navbar****/
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    background-color: rgb(233, 195, 124);
+}
+.btn-navbar {
+    display: flex;
+}
+.btn-navbar-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin: 0 40px;
+}
+
+/*****Logo Auryn*****/
+.logo-container {
+  display: flex;
+}
+.logo-container p {
+  align-self: center;
+  padding-left: 15px;
+}
+.logo-auryn {
+    height: 12vmin;
+    pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .logo-auryn {
+      animation: logo-auryn-spin infinite 20s linear;
+    }
+}
+@keyframes logo-auryn-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/*****Logo Carrito*****/
+.logo-carrito {
+  height: 7vmin;
+  align-self: center;
+  padding-left: 40px;
+}
+.cant-carrito {
+  align-self: center;
+  padding-left: 10px;
+}
