@@ -1,0 +1,12 @@
+.item {
+    border: solid orange 2px;
+    margin: 10px;
+    padding: 10px;
+}
+.item-header {
+    font-size: 1.5rem;
+}
+.item-img {
+    width: 200px;
+    height: 300px;
+}
