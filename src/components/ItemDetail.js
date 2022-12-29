@@ -1,4 +1,3 @@
-
 const ItemDetail = ({product}) => {
     return (
         <article className="item">

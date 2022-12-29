@@ -1,13 +1,13 @@
 import ItemDetail from "./ItemDetail"
 import { getBook } from "../asyncmock";
 import { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [book, setBook] = useState([]);
-    // const { bookId } = useParams()
+    const { productId } = useParams()
     useEffect(() => {
-        getBook
+        getBook(productId) 
         .then((res) => {
             setBook(res);
         })
@@ -16,12 +16,12 @@ const ItemDetailContainer = () => {
         })
         .finally(() => {
             //ejecutar siempre y al final
-            setBook();
+            // setBook();
         })
-    }, []);
+    }, [productId]);
     return (
-        <div>
-            <ItemDetail product={book}/>
+        <div className="item-detail-container">
+            <ItemDetail product={book} key={book.id}/>
         </div>
         
     )

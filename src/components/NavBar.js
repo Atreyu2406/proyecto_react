@@ -1,7 +1,8 @@
 import './NavBar.css';
 import "./CartWidget";
 import CartWidget from './CartWidget';
-import ButtonNavBar from './ButtonNavBar';
+
+import { NavLink } from 'react-router-dom';
 
 const logo = "images/auryn.png";
 
@@ -13,10 +14,10 @@ const Navbar = ({title}) => {
                 <p>{title}</p>
             </div>
             <div className="btn-navbar">
-                <ButtonNavBar label="Griffindor"/>
-                <ButtonNavBar label="Slyterhin"/>
-                <ButtonNavBar label="Ravenclaw"/>
-                <ButtonNavBar label="Hufflepuff"/>
+                <NavLink to={`/category/libros`} className="btn-navbar-button">Libros</NavLink>
+                <NavLink to={`/category/zapatillas`} className="btn-navbar-button">Zapatillas</NavLink>
+                <NavLink to={`/category/remeras`} className="btn-navbar-button">Remeras</NavLink>
+                <NavLink to={`/category/hufflepuff`} className="btn-navbar-button">Hufflepuff</NavLink>
                 <CartWidget/>
             </div> 
         </nav>

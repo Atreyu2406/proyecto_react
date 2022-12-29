@@ -11,6 +11,7 @@ function App() {
         <Navbar title="Atreyu Merchandising"/>
         <Routes>
           <Route path='/' element={<ItemListContainer greeting="Bienvenidos" color="orange" tamanio="3rem" borde="3px solid orange"/>}/>
+          {/* <Route path="/about" element={<h1>About</h1>}/> */}
           <Route path='/category/:categoryId' element={<ItemListContainer greeting="Bienvenidos" color="orange" tamanio="3rem" borde="3px solid orange"/>}/>
           <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
         </Routes>
