@@ -2,58 +2,56 @@ export const books = [
     {
         id:1, 
         name: "Harry Potter y la Piedra Filosofal",
-        editorial: "Salamandra",
         price: 850,
-        paginas: 425,
-        tapa: "Dura",
+        stock: 5,
         img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672252820/piedra_filosofal_ctcuog.jpg",
         category: "libros"
     },
     {
         id:2, 
         name: "Harry Potter y la Cámara Secreta",
-        editorial: "Salamandra",
         price: 720,
-        paginas: 521,
-        tapa: "Dura",
+        stock: 3,
         img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672254287/camara_secreta_hb6uw4.jpg",
         category: "libros"
     },
     {
         id:3, 
-        name: "Harry Potter y el Prisionero de Azkabán",
-        editorial: "Salamandra",
+        name: "Bufanda Hufflepuff",
         price: 642,
-        paginas: 820,
-        tapa: "Dura",
-        img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672254337/prisionero_azkaban_zybwgh.jpg",
-        category: "libros"
+        stock: 2,
+        img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672873749/bufanda_hufflepuff_fbijwk.jpg",
+        category: "indumentaria"
     },
-    // {
-    //     id:4, 
-    //     name: "Harry Potter y el Prisionero de Azkabán",
-    //     editorial: "Salamandra",
-    //     price: 642,
-    //     paginas: 820,
-    //     tapa: "Dura",
-    //     img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672155892/samples/ecommerce/shoes.png",
-    //     category: "zapatillas"
-    // },
-    // {
-    //     id:5, 
-    //     name: "Harry Potter y el Prisionero de Azkabán",
-    //     editorial: "Salamandra",
-    //     price: 642,
-    //     paginas: 820,
-    //     tapa: "Dura",
-    //     img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672155896/samples/ecommerce/leather-bag-gray.jpg",
-    //     category: "remeras"
-    // }
+    {
+        id:4, 
+        name: "Varita Mágica Ollivander",
+        price: 642,
+        stock: 2,
+        img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672873749/varitas_sdvup4.png",
+        category: "varitas"
+    },
+    {
+        id:5, 
+        name: "Vaso de Café Slytherin",
+        price: 642,
+        stock: 12,
+        img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672873749/vaso_slytherin_tzdxzu.png",
+        category: "vasos"
+    }
 ]
+
+const categories = [
+    { id: "libros", description: "Libros"},
+    { id: "indumentaria", description: "Indumentaria"},
+    { id: "varitas", description: "Varitas"},
+    { id: "vasos", description: "Vasos"}
+]
+
 export const getBooks = new Promise ((resolve) => {
     setTimeout(() => {
         resolve(books)
-    }, 1000)
+    }, 2000)
 });
 
 export const getBook = (id) => {
@@ -61,15 +59,17 @@ export const getBook = (id) => {
         const prod = books.find(b => b.id === parseInt(id))
         setTimeout(() => {
             resolve(prod)
-        }, 2000)
+        }, 1000)
     });
 }
 
-// export const getBook = new Promise ((resolve) => {
-//     setTimeout(() => {
-//         resolve(books[0])
-//     }, 2000)
-// });
+export const getCategories = () => {
+    return new Promise((resolve => {
+        setTimeout(() => {
+            resolve(categories)
+        }, 1000)
+    }))
+}
 
 
   

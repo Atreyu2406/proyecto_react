@@ -1,0 +1,17 @@
+.item-cart-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-cart {
+    border-bottom: 1px solid orange; 
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.item-cart img {
+    width: 80px;  
+}
+.item-cart-button {
+    background-color: rgb(245, 187, 79);
+    border: 1px solid orange;
+}

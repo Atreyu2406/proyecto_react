@@ -1,0 +1,5 @@
+.cart-total {
+    display: inline-block;
+    border: solid 1px orange;
+    padding: 5px;
+}

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import "./FunctionCounter.css"
+
+
 
 const FunctionCounter = ({stock=1, initial=1, onAdd}) => {
     const [count, setCount] = useState(initial);
@@ -17,10 +20,11 @@ const FunctionCounter = ({stock=1, initial=1, onAdd}) => {
     }
     return (
         <div>
-            <h3>Counter</h3>
-            <h3>{count}</h3>
-            <button onClick={decrement}>-</button>
-            <button onClick={increment}>+</button>
+            <div className="counter">
+                <button className="counter-button" onClick={decrement}>-</button>
+                <h3>{count}</h3>
+                <button className="counter-button" onClick={increment}>+</button>
+            </div>
             <div>
                 <button className="option" onClick={()=>onAdd(count)}>Agregar al Carrito</button>
             </div> 

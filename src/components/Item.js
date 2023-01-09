@@ -14,10 +14,10 @@ const Item = ({product}) => {
             </picture>
             <section>
                 <p className="item-info">
-                    Categoría: {product.category}
+                    Precio: ${product.price}
                 </p>
                 <p className="item-info">
-                    Precio: ${product.price}
+                    Stock: {product.stock} unidades
                 </p>
             </section>
             <footer className="item-footer">
