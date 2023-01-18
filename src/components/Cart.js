@@ -7,7 +7,7 @@ import "./Cart.css"
 const Cart = () => {
     const { cart, totalPrice } = useContext(CartContext)
 
-    if (cart.lenght === 0) {
+    if (cart.length === 0) {
         return (
             <>
                 <p>No hay elementos en el carrito</p>

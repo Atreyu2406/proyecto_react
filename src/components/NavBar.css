@@ -21,6 +21,7 @@
 /*****Logo Auryn*****/
 .logo-container {
   display: flex;
+  align-items: center
 }
 .logo-container p {
   align-self: center;

@@ -2,15 +2,18 @@ import { useState, useContext } from "react";
 import FunctionCounter from "./FunctionCounter";
 import { Link } from "react-router-dom";
 import CartContext from "../context/CartContext";
+import NotificationContext from "../services/notification/NotificationServices";
 
 const ItemDetail = ({product}) => {
     const [goToCart, setGoToCart] = useState(false);
-    const { addProduct } = useContext(CartContext)
+    const { addProduct } = useContext(CartContext);
+    const setNotification = useContext(NotificationContext);
 
     const handleOnAdd = (quantify) => {
         setGoToCart(true)
         addProduct(product, quantify)
-        console.log(`Se agregaron ${quantify} productos`)
+        setNotification(`success`, `Se agregó ${product.name} al carrito`)
+        // console.log(`Se agregaron ${quantify} productos`)
     }
 
     return (
@@ -31,7 +34,7 @@ const ItemDetail = ({product}) => {
             </section>
             <footer className="counter-footer">
                 {/* <button onClick={() => setShow(!show)}>{show ? "Cerrar Contador" : "Abrir Contador"}</button> */}
-                {goToCart ? <Link to="/cart">Finalizar Compra</Link> : <FunctionCounter stock={10} initial={2} onAdd={handleOnAdd}/>}
+                {goToCart ? <Link to="/cart">Finalizar Compra</Link> : <FunctionCounter stock={product.stock} onAdd={handleOnAdd}/>}
                 {/* <button>Ver Detalle</button> */}
             </footer>
         </article>

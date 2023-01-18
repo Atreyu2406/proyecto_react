@@ -1,14 +1,18 @@
 import { getBooks } from '../asyncmock';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
+import NotificationContext from '../services/notification/NotificationServices';
 // import "./ItemListContainer.css"
 
 const ItemListContainer = ({greeting, color, tamanio, borde}) => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const { categoryId } = useParams();
+    const setNotification = useContext(NotificationContext);
+
     useEffect(() => {
+        setNotification(`success`, `Bienvenido`)
         if (categoryId) {
             getBooks
             .then((res) => {
