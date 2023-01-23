@@ -4,11 +4,14 @@ import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 import { getCategories } from '../asyncmock';
 import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import CartContext from '../context/CartContext';
 
 const logo = "images/auryn.png";
 
 const Navbar = ({title}) => {
     const [categories, setCategories] = useState([])
+    const { cart } = useContext(CartContext)
 
     useEffect(() => {
         getCategories()

@@ -39,7 +39,7 @@ export const NotificationServicesProvider = ({children}) => {
         setSeverity(severity)
         setTimeout(() => {
             setMessage("")
-        }, 5000)
+        }, 2000)
     }
 
     return (

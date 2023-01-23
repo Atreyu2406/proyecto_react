@@ -26,15 +26,15 @@ export const books = [
     {
         id:4, 
         name: "Varita Mágica Ollivander",
-        price: 642,
-        stock: 2,
+        price: 1280,
+        stock: 7,
         img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672873749/varitas_sdvup4.png",
         category: "varitas"
     },
     {
         id:5, 
         name: "Vaso de Café Slytherin",
-        price: 642,
+        price: 510,
         stock: 12,
         img: "https://res.cloudinary.com/dwzuvamqz/image/upload/v1672873749/vaso_slytherin_tzdxzu.png",
         category: "vasos"
